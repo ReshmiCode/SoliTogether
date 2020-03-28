@@ -6,7 +6,7 @@ import Header from './Header';
 import Quote from './Quote';
 import Buttons from './Buttons';
 
-const Home = () => {
+const HomeResources = () => {
     return(
         <div>
             <Header />
@@ -16,7 +16,7 @@ const Home = () => {
                     <Buttons />
                 </div>
                 <div className="column">
-                    <iframe className="content-box" src="/fun-stuff" width="400" height="200"></iframe>
+                    <iframe className="content-box" src="/resources" width="400" height="200"></iframe>
                 </div>
             </div>
 
@@ -24,4 +24,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomeResources;
