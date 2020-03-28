@@ -10,6 +10,10 @@ import FunStuff from './FunStuff/FunStuff';
 import './App.css';
 
 function App() {
+  if (localStorage.getItem("userId") === null) {
+    localStorage.setItem("userId", Math.random().toString(36).substring(2, 15));
+  }
+
   return (
     <Router>
       <main>
