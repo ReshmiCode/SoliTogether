@@ -7,6 +7,7 @@ import HomeResources from './Home/HomeResources';
 import Task from './Task/Task';
 import Resources from './Resources/Resources';
 import FunStuff from './FunStuff/FunStuff';
+import SubmitResource from './Resources/SubmitResource';
 import './App.css';
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/fun-stuff" exact>
             <FunStuff />
+          </Route>
+          <Route path="/submit-resource" exact>
+            <SubmitResource />
           </Route>
           <Redirect to="/"/>
         </Switch>

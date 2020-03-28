@@ -1,0 +1,39 @@
+.resource-header {
+    display: inline-block;
+    height: fit-content;
+    text-align: center;
+    background: #1721F2;
+    color: white;
+}
+
+.links {
+    display: inline-block;
+    height: fit-content;
+    text-align: center;
+    background: #C8FFC3;
+}
+
+.form {
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+}
+
+.new-resource {
+    margin: 2rem;
+    text-align: center;
+}
+
+.resource-button {
+    display: inline-block;
+    width: fit-content;
+    background-color: #D4F1F6;
+    cursor: pointer;
+    text-align: center;
+    border: 5px solid #1721F2;
+    margin: 10px;
+}
+
+.resource-button:hover {
+    background-color: #ddd;
+    color: black;
+}
