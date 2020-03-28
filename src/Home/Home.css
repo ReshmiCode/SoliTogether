@@ -27,6 +27,7 @@ div{
     height: fit-content;
     text-align: center;
     background: #FFD0D0;
+    padding: 0.5rem;
 }
 
 .column {
