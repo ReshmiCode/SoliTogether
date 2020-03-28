@@ -113,7 +113,7 @@ const SubmitResource = () => {
                 </form>
             </div>
             <div  className="links">
-                <Link to ='/add-resource' > <p>Submit A Resource</p> </Link>
+                <Link to ='/submit-resource' > <p>Submit A Resource</p> </Link>
                 <Link to ='/get-support' > <p>💜 To Get Support 💜</p> </Link>
                 <Link to ='/hustle' > <p>💻 To Hustle 💻</p> </Link>
                 <Link to ='/relax' >  <p>📖 To Relax 📖</p>  </Link>

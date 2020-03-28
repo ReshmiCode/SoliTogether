@@ -1,0 +1,14 @@
+.resource-header {
+    display: inline-block;
+    height: fit-content;
+    text-align: center;
+    background: #1721F2;
+    color: white;
+}
+
+.links {
+    display: inline-block;
+    height: fit-content;
+    text-align: center;
+    background: #C8FFC3;
+}
