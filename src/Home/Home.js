@@ -19,7 +19,7 @@ const Home = () => {
                     <Buttons changeTab={tabChangeHandler}/>
                 </div>
                 <div className="column">
-                    <iframe className="content-box" src={`/${currTab}`} width="400" height="200"></iframe>
+                    <iframe className="content-box" src={currTab} width="400" height="200"></iframe>
                 </div>
             </div>
 
