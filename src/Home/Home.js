@@ -15,10 +15,10 @@ const Home = () => {
         <div>
             <Quote />
             <div class="row">
-                <div className="column">
+                <div className="buttons-column">
                     <Buttons changeTab={tabChangeHandler}/>
                 </div>
-                <div className="column">
+                <div className="content-column">
                     <iframe className="content-box" src={currTab} width="400" height="200"></iframe>
                 </div>
             </div>
