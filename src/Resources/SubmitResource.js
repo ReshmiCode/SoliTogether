@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import './SubmitResource.css'
 
+const axios = require('axios').default;
+
 const SubmitResource = () => {
 
     const [enteredCategory, setEnteredCategory] = useState('');
@@ -28,6 +30,19 @@ const SubmitResource = () => {
         console.log(newResource);
 
         //Add to db here
+        axios.post('/resources', {
+            category: newResource.category,
+            title: newResource.name,
+            medium: newResource.medium,
+            url: newResource.link,
+            description: newResource.description,
+        })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 
         setEnteredCategory('');
         setEnteredName('');

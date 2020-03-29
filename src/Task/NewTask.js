@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+const axios = require('axios').default;
 
 const NewTask = props => {
 
@@ -12,6 +13,17 @@ const NewTask = props => {
             count: 0
         };
         props.onAddTask(newGoal);
+        
+    //     axios.post('/user', {
+    //         newGoal
+    //       })
+    //       .then(function (response) {
+    //         console.log(response);
+    //       })
+    //       .catch(function (error) {
+    //         console.log(error);
+    //     });
+
         setEnteredTask('');
     };
 
