@@ -69,7 +69,8 @@ div {
 }
 
 .button:hover {
-    background-color: #FFD0D0;
+    border: 5px dashed #F99AB9;
+    background-color: #ffd0d0;
     color: black;
 }
 
