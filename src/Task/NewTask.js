@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import './NewTask.css';
+
 const axios = require('axios').default;
 
 const NewTask = props => {
@@ -34,10 +37,13 @@ const NewTask = props => {
 
 
     return (
-        <div>
-            <form onSubmit={addTaskHandler}>
-                <input type="text" value={enteredTask} onChange={taskChangeHandler} placeholder="Enter Task" required />
-                <button type="submit">add</button>
+        <div className="form">
+            <form className="new-task" onSubmit={addTaskHandler} >
+                <label> Add New Task: 
+                    <input type="text" value={enteredTask} onChange={taskChangeHandler} placeholder="Enter Task" required />
+                </label>
+                <br />
+                <button className="task-button" type="submit">Add Task</button>
             </form>
         </div>
     );

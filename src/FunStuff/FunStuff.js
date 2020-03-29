@@ -20,10 +20,10 @@ const FunStuff = () => {
     return(
         <div>
             <div className="intro-bar">
-                <h1>Fun Stuff</h1>
+                <h1>🌟 Fun Stuff 🌟 </h1>
             </div>
             <div className="intro-desc">
-                <h1>These Cutest Collection</h1>
+                <h1>The Cutest Collection</h1>
             </div>
             <div className="fun">
                 <img  className="fun" src={funStuff[randomIndex]} />

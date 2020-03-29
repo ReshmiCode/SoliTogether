@@ -15,7 +15,7 @@ const Task = () => {
     }]);
 
     const addNewTask = async (newTask) => {
-        await axios.get('http://localhost:8000/api/v1/users', { crossdomain: true })
+        await axios.get('https://rowdyhacks-2020.appspot.com/api/v1/users/tasks/5e802fe14f41e13a0c6c5db4')
         .then(function (response) {
             console.log(response);
         });
