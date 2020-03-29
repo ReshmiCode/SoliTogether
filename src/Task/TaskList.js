@@ -10,13 +10,15 @@ const Task = props => {
       }
     
       return (
-        <ul className="users-list">
-          {props.items.map(task => {
-            return (
-              <TaskCard task={task} />
-            );
-          })}
-        </ul>
+        <div>
+            <ul className="users-list">
+              {props.items.map(task => {
+                return (
+                  <TaskCard task={task} />
+                );
+              })}
+            </ul>
+        </div>
       );
     };
 

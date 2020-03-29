@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import NewTask from './NewTask';
 import TaskList from './TaskList';
-import '../Resources/Resources.css'
+import '../Resources/Resources.css';
+import './Task.css';
 
 const Task = () => {
-    const tasks = [{
+    const [tasks, setTasks] = useState([{
         description: "drink water",
         repeats: true,
         count: 2,
         reminderTime: "7pm"
-    }];
+    }]);
+
+    const addNewTask = (newTask) => {
+        setTasks((prevTasks) => {
+          return prevTasks.concat(newTask);
+        }); // use this when using prev state bc safer
+      }
 
     return(
         <div>
@@ -19,8 +27,10 @@ const Task = () => {
             <div className="intro-desc">
                 <h1>Set Daily Tasks</h1>
             </div>
-            <h1>Tasks</h1>
-            <TaskList items={tasks}/>
+            <div className="task-list">
+                <NewTask onAddTask={addNewTask}/>
+                <TaskList items={tasks}/>
+            </div>
         </div>
     );
 };
