@@ -49,6 +49,9 @@ exports.addUser = async (req, res, next) => {
 
 exports.deleteUser = async (req, res, next) => {
     try {
+
+        const { phoneNo, tasks } = req.body;
+
         const user = await User.findById(req.params.id);
 
         if(!user){
@@ -58,11 +61,9 @@ exports.deleteUser = async (req, res, next) => {
             });
         }
 
-        await user.remove();
-
         return res.status(200).json({
             success: true,
-            data: {}
+            data: user
         });
 
     } catch (error) {
@@ -143,6 +144,24 @@ exports.deleteTask = async (req, res, next) => {
         await user.tasks.pull({_id: req.params.id2});
         await user.save();
 
+        return res.status(200).json({
+            success: true,
+            data: user.tasks
+        });
+
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            error: 'Server Error'
+        });
+    }
+}
+
+exports.updateTaskCount = async (req, res, next) => {
+    try {
+
+        const task = await User.update({"_id":req.params.id, "tasks._id":req.params.id2}, {$set : {"tasks.$.count" :req.params.change} });
+        const user = await User.findById(req.params.id);
         return res.status(200).json({
             success: true,
             data: user.tasks

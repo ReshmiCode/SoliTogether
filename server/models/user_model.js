@@ -16,6 +16,13 @@ const UserSchema = new mongoose.Schema({
             
                 },
 
+                count: {
+                    type: Number,
+                    default: 0
+                },
+
+
+
                 dateAdded: {
                     type: Date,
                     default: Date.now

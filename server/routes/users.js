@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getUser, addUser, deleteUser, getTask, addTask, deleteTask, getPN, addPN, deletePN} = require('../controllers/user_controller');
+const { getUser, addUser, deleteUser, getTask, addTask, deleteTask, getPN, addPN, deletePN, updateTaskCount} = require('../controllers/user_controller');
 
 router
     .route('/')
@@ -25,5 +25,10 @@ router
 router
     .route('/tasks/:id/:id2')
     .delete(deleteTask);
+
+router
+    .route('/tasks/:id/:id2/:change')
+    .patch(updateTaskCount);
+
 
 module.exports = router;
