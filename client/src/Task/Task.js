@@ -8,10 +8,10 @@ const axios = require('axios');
 
 const Task = () => {
     const [tasks, setTasks] = useState([{
-        description: "drink water",
-        repeats: true,
+        name: "drink water",
+        //repeats: true,
         count: 2,
-        reminderTime: "7pm"
+        //reminderTime: "7pm"
     }]);
 
     const addNewTask = async (newTask) => {
@@ -26,7 +26,7 @@ const Task = () => {
     }
 
     const increaseCount = (desc) => {
-        const objIndex = tasks.findIndex((obj => obj.description === desc));
+        const objIndex = tasks.findIndex((obj => obj.name === desc));
         setTasks((prevTasks) => {
             prevTasks[objIndex].count = prevTasks[objIndex].count + 1;
             return prevTasks.slice(0);  // must return new array for state to update
