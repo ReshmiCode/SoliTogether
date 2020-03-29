@@ -15,6 +15,7 @@
 
 .resource {
     display: inline-block;
+    background: #D4F1F6;
 }
 
 .portfolio-card {
@@ -23,7 +24,8 @@
     border: 10px solid #9DE996;
     min-width:fit-content;
     width: 25%;
-    margin: 15px 15px 15px 15px;;
+    margin: 15px 15px 15px 15px;
+    background-color: #C8FFC3;
 }
 
 .card-padding {
