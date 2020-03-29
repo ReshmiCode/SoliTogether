@@ -6,18 +6,3 @@
 .new-task {
     text-align: center;
 }
-
-.task-button {
-    display: inline-block;
-    width: fit-content;
-    background-color: #D4F1F6;
-    cursor: pointer;
-    text-align: center;
-    border: 4px solid rgb(23, 191, 242);
-    margin: 10px;
-}
-
-.task-button:hover {
-    background-color: #ddd;
-    color: black;
-}

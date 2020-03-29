@@ -8,16 +8,27 @@
 }
 
 .task-button {
-    display: inline-block;
+    /*display: inline-block;
     width: fit-content;
     background-color: #D4F1F6;
+    border: 4px solid rgb(23, 191, 242);*/
+    margin: 10px;
     cursor: pointer;
     text-align: center;
-    border: 4px solid rgb(23, 191, 242);
-    margin: 10px;
+    background-image: url(../cloud.png);
+    background-size:cover;
+    background-position:center center;
+    width: 100px;
+    height: 60px;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
 }
 
 .task-button:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: 3px 3px 5px rgb(13, 166, 213, 0.7);
+}
+
+.cloud-img {
+    height: 20px;
 }

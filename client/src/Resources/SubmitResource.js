@@ -122,9 +122,9 @@ const SubmitResource = () => {
                         <input type="text" value={enteredSubmittedBy} onChange={submittedChangeHandler} placeholder="Submitted By" required/>
                     </label> <br />
                     <Link to ='/' >
-                        <button className="resource-button">Cancel</button>
+                        <button className="resource-button task-button">Cancel</button>
                     </Link>
-                    <button className="resource-button" type="submit">Add Goal</button>
+                    <button className="resource-button task-button" type="submit">Add Goal</button>
                 </form>
             </div>
             <div  className="links">
