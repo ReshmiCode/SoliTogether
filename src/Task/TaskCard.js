@@ -10,7 +10,7 @@ const TaskCard = props => {
     }
 
     return (
-        <div className="card-main" onClick={props.increaseCount(props.task.description)}>
+        <div className="card-main" onClick={() => props.increaseCount(props.task.description)}>
             <h2>{props.task.description}{checks}</h2>
         </div>
     );

@@ -20,11 +20,10 @@ const Task = () => {
     }
 
     const increaseCount = (desc) => {
-        console.log("called")
         const objIndex = tasks.findIndex((obj => obj.description === desc));
         setTasks((prevTasks) => {
-            prevTasks[objIndex].count = prevTasks[objIndex].count++;
-            return prevTasks;
+            prevTasks[objIndex].count = prevTasks[objIndex].count + 1;
+            return prevTasks.slice(0);  // must return new array for state to update
         });
     }
 
