@@ -9,7 +9,7 @@
     display: inline-block;
     height: fit-content;
     text-align: center;
-    background: #FFF2ED;
+    background: #FFD0D0;
 }
 
 .links {
@@ -17,4 +17,14 @@
     height: fit-content;
     text-align: center;
     background: #C8FFC3;
+}
+
+.link {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 20px;
+}
+
+.link:hover {
+    color: purple;
 }
