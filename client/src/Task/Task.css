@@ -1,3 +1,8 @@
 .task-list {
     margin: 1rem;
 }
+
+.tasks-list {
+    background-color: #D4F1F6;
+    padding: 20px;
+}

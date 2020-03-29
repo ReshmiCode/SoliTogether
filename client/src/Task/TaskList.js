@@ -2,6 +2,8 @@ import React from 'react';
 
 import TaskCard from './TaskCard';
 
+import './Task.css';
+
 const Task = props => {
     if (props.items.length === 0) {
         return (
@@ -11,7 +13,7 @@ const Task = props => {
     
       return (
         <div>
-            <ul className="users-list">
+            <ul className="tasks-list">
               {props.items.map(task => {
                 return (
                   <TaskCard task={task} increaseCount={props.increaseCount}/>
