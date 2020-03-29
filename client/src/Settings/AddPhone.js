@@ -4,7 +4,7 @@ import './AddPhone.css';
 
 const axios = require('axios');
 
-const AddPhone = () => {
+const AddPhone = props => {
 
     const [enteredPhone, setEnteredPhone] = useState('');
 
@@ -19,7 +19,7 @@ const AddPhone = () => {
             phoneNo: phoneNumber
         })
         .then(function (response) {
-            console.log(response);
+            props.changeNumb(phoneNumber);
         })
         .catch(function (error) {
             console.log(error);
