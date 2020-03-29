@@ -1,6 +1,9 @@
-div{
+div {
     box-sizing: border-box;
     width: 100%;
+}
+
+.main {
     background-color: #DDF9FF;
 }
 
@@ -73,7 +76,7 @@ div{
 .content-box {
     display: inline-block;
     width: 90%;
-    height: 500px;
+    height: 550px;
     background-color: #C8FFC3;
     text-align: center;
     border: 5px solid #9DE996;

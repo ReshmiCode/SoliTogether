@@ -12,7 +12,7 @@ const Home = () => {
     const tabChangeHandler = (tab) => { setTab(tab); } 
 
     return(
-        <div>
+        <div className="main">
             <Quote />
             <div class="row">
                 <div className="buttons-column">
