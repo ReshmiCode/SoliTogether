@@ -1,20 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './Home.css'
+import './Home.css';
 
-const Buttons = () => {
+const Buttons = props => {
+    console.log(props)
     return(
         <div>
-            <Link to="/home-tasks">
-                <button className="button">Tasks</button>
-            </Link>
-            <Link to="/home-resources">
-                <button className="button">Resources</button>
-            </Link>
-            <Link to="/">
-                <button className="button">Fun Stuff</button>
-            </Link>
+            <button className="button" onClick={() => props.changeTab('home-tasks')}>Tasks</button>
+            <button className="button">Resources</button>
+            <button className="button">Fun Stuff</button>
         </div>
     );
 };
