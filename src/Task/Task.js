@@ -16,8 +16,17 @@ const Task = () => {
     const addNewTask = (newTask) => {
         setTasks((prevTasks) => {
           return prevTasks.concat(newTask);
-        }); // use this when using prev state bc safer
-      }
+        });
+    }
+
+    const increaseCount = (desc) => {
+        console.log("called")
+        const objIndex = tasks.findIndex((obj => obj.description === desc));
+        setTasks((prevTasks) => {
+            prevTasks[objIndex].count = prevTasks[objIndex].count++;
+            return prevTasks;
+        });
+    }
 
     return(
         <div>
@@ -29,7 +38,7 @@ const Task = () => {
             </div>
             <div className="task-list">
                 <NewTask onAddTask={addNewTask}/>
-                <TaskList items={tasks}/>
+                <TaskList items={tasks} increaseCount={increaseCount}/>
             </div>
         </div>
     );

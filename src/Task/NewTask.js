@@ -5,9 +5,11 @@ const NewTask = props => {
         event.preventDefault();
         const newGoal = {
             description: Math.random().toString(),
+            count: 0
         };
         props.onAddTask(newGoal);
-    }
+    };
+
     return (
         <div>
             <form onSubmit={addTaskHandler}>

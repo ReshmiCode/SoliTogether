@@ -7,7 +7,7 @@ import Quote from './Quote';
 import Buttons from './Buttons';
 
 const Home = () => {
-    const [currTab, setTab] = useState("/resources");
+    const [currTab, setTab] = useState("/task");
 
     const tabChangeHandler = (tab) => { setTab(tab); } 
 

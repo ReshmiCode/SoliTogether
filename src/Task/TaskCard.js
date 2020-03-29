@@ -1,8 +1,19 @@
 import React from 'react';
 
+import './TaskCard.css';
+
 const TaskCard = props => {
-    console.log(props)
-    return <h2>{props.task.description}</h2>;
+    var checks = ' ';
+
+    for (var i = 0; i < props.task.count; i++) {
+        checks += '✅';
+    }
+
+    return (
+        <div className="card-main" onClick={props.increaseCount(props.task.description)}>
+            <h2>{props.task.description}{checks}</h2>
+        </div>
+    );
 }
 
 export default TaskCard;

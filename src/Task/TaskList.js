@@ -14,7 +14,7 @@ const Task = props => {
             <ul className="users-list">
               {props.items.map(task => {
                 return (
-                  <TaskCard task={task} />
+                  <TaskCard task={task} increaseCount={props.increaseCount}/>
                 );
               })}
             </ul>
