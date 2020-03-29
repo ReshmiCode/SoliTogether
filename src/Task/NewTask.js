@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const NewTask = props => {
+
+    const [enteredTask, setEnteredTask] = useState('');
+
     const addTaskHandler = event => {
         event.preventDefault();
         const newGoal = {
-            description: Math.random().toString(),
+            id: Math.random().toString(),
+            description: enteredTask,
             count: 0
         };
         props.onAddTask(newGoal);
+        setEnteredTask('');
     };
+
+    const taskChangeHandler = event => {
+        setEnteredTask(event.target.value);
+    };
+
 
     return (
         <div>
             <form onSubmit={addTaskHandler}>
-                <input placeholder="enter task">
-                </input>
+                <input type="text" value={enteredTask} onChange={taskChangeHandler} placeholder="Enter Task" required />
                 <button type="submit">add</button>
             </form>
         </div>

@@ -5,7 +5,7 @@ import './TaskCard.css';
 const TaskCard = props => {
     var checks = ' ';
 
-    for (var i = 0; i < props.task.count; i++) {
+    for (var i = 0; i < props.task.count; i+=2) {
         checks += '✅';
     }
 
