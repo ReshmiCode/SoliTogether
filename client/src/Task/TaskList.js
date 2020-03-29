@@ -16,7 +16,7 @@ const Task = props => {
             <ul className="tasks-list">
               {props.items.map(task => {
                 return (
-                  <TaskCard task={task} increaseCount={props.increaseCount}/>
+                  <TaskCard task={task} increaseCount={props.increaseCount} removeTask={props.removeTask}/>
                 );
               })}
             </ul>

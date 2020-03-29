@@ -25,6 +25,15 @@ const Task = () => {
         });
     }
 
+    const removeTask = (id) => {
+        setTasks((prevTasks) => {
+            var filteredItems = prevTasks.filter(function (item) {
+                return (item._id !== id);
+            });
+            return filteredItems;
+        });
+    }
+
     const increaseCount = (desc) => {
         const objIndex = tasks.findIndex((obj => obj.name === desc));
         setTasks((prevTasks) => {
@@ -43,7 +52,7 @@ const Task = () => {
             </div>
             <div className="task-list">
                 <NewTask onAddTask={addNewTask}/>
-                <TaskList items={tasks} increaseCount={increaseCount}/>
+                <TaskList items={tasks} increaseCount={increaseCount} removeTask={removeTask}/>
             </div>
         </div>
     );

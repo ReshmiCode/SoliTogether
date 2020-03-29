@@ -12,9 +12,18 @@ const TaskCard = props => {
         checks += '✅';
     }
 
+    const deleteTask = event => {
+        event.stopPropagation();
+        props.removeTask(props.task._id);
+    }
+
     return (
-        <div className="card-main" onClick={() => props.increaseCount(props.task.name)}>
-            <h2>{props.task.name}{checks}</h2>
+        <div className="card-main">
+            <h2 onClick={() => props.increaseCount(props.task.name)}>{props.task.name}{checks}
+                <button type='button' onClick={deleteTask}>
+                    <img className="icon" src="../../trashIcon.png" alt="delete" />
+                </button>
+            </h2>
         </div>
     );
 }

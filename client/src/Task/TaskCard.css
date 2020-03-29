@@ -9,8 +9,23 @@
     text-align: center;
     border-left: 10px solid rgb(23, 191, 242);
     margin: 10px;
+
+    position: relative;
 }
 
 .card-main:hover {
     box-shadow: 3px 3px 5px rgb(13, 166, 213, 0.7);
+}
+
+h2 button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+}
+
+.icon {
+    width: 20px;
 }
