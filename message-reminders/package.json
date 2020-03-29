@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "send_sms.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-env-run": "^3.0.2",
+    "twilio": "^3.41.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "sendSMS": "nodenv sendSMS.js",
+    "sendMsgService": "nodenv sendMsgService.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
