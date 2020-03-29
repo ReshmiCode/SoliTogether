@@ -13,6 +13,7 @@ import Hustle from './Resources/Pages/Hustle';
 import Relax from './Resources/Pages/Relax';
 import Attend from './Resources/Pages/Attend';
 import Host from './Resources/Pages/Host';
+import Settings from './Settings/Settings'
 import './App.css';
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
           </Route>
           <Route path="/host" exact>
             <Host />
+          </Route>
+          <Route path="/settings" exact>
+            <Settings />
           </Route>
           <Redirect to="/"/>
         </Switch>

@@ -1,0 +1,17 @@
+.intro-bar {
+    display: inline-block;
+    height: fit-content;
+    text-align: center;
+    background: #F99AB9;
+}
+
+.intro-desc {
+    display: inline-block;
+    height: fit-content;
+    text-align: center;
+    background: #FFD0D0;
+}
+
+.current {
+    text-align: center;
+}
