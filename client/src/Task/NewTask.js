@@ -18,10 +18,10 @@ const NewTask = props => {
         
         axios.post('https://rowdyhacks-2020.appspot.com/api/v1/users/tasks/5e802fe14f41e13a0c6c5db4', newGoal)
         .then(function (response) {
-        console.log(response);
+            console.log(response);
         })
         .catch(function (error) {
-        console.log(error.response);
+            console.log(error.response);
         });
 
         setEnteredTask('');
