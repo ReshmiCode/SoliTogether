@@ -4,6 +4,7 @@ import NewTask from './NewTask';
 import TaskList from './TaskList';
 import '../Resources/Resources.css';
 import './Task.css';
+const axios = require('axios');
 
 const Task = () => {
     const [tasks, setTasks] = useState([{
@@ -13,7 +14,12 @@ const Task = () => {
         reminderTime: "7pm"
     }]);
 
-    const addNewTask = (newTask) => {
+    const addNewTask = async (newTask) => {
+        await axios.get('http://localhost:8000/api/v1/users', { crossdomain: true })
+        .then(function (response) {
+            console.log(response);
+        });
+
         setTasks((prevTasks) => {
           return prevTasks.concat(newTask);
         });
