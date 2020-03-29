@@ -25,7 +25,9 @@ const FunStuff = () => {
             <div className="intro-desc">
                 <h1>These Cutest Collection</h1>
             </div>
-            <img className="fun" src={funStuff[randomIndex]} />
+            <div className="fun">
+                <img  className="fun" src={funStuff[randomIndex]} />
+            </div>
         </div>
     );
 };

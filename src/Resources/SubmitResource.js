@@ -71,7 +71,7 @@ const SubmitResource = () => {
                 <h1>Add Resource</h1>
             </div>
             <div className="form">
-                <form className="new-resource" onSubmit={addResourceHandler} method="post" action="/add-new-resource"> 
+                <form className="new-resource" onSubmit={addResourceHandler}> 
                     <label> Category:
                         <select value={enteredCategory} onChange={categoryChangeHandler} required>
                             <option value="">Select A Category</option>
