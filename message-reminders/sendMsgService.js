@@ -9,6 +9,7 @@ require('dotenv').config()
 
 const client = require('twilio')(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN);
 const numbers = ["+15056158722", "+14693804692"];
+cronJob = require('cron').CronJob;
 
 let messageArray = 
     ["Make sure you stay hydrated!", 
@@ -20,14 +21,17 @@ let messageArray =
     "Eat some fruits and veggies every day!", 
     "Don't forget to exercise every day! Stay active!"];
 
-Promise.all(
-    numbers.map(number => {
-        return client.messages.create({
-            body: messageArray[Math.floor(Math.random() * messageArray.length)],
-            from: process.env.MSG_SERVICE_SID,
-            to: number,
-        });
-    })
-)
-    .then(messages => { console.log("mei i sent the messages it's 4am you're great"); })
-    .catch(err => console.error(err));
+var textJob = new cronJob( '00 11 * * *', function(){
+    Promise.all(
+        numbers.map(number => {
+            return client.messages.create({
+                body: messageArray[Math.floor(Math.random() * messageArray.length)],
+                from: process.env.MSG_SERVICE_SID,
+                to: number,
+            });
+        })
+    )
+        .then(messages => { console.log("mei i sent the messages it's 4am you're great"); })
+        .catch(err => console.error(err));
+},  null, true);
+
