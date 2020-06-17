@@ -12,7 +12,7 @@ const Settings = () => {
     useEffect(() => {
       const fetchData = async () => {
         const result = await axios(
-          'https://rowdyhacks-2020.appspot.com/api/v1/users/pn/5e802fe14f41e13a0c6c5db4',
+          'https://hdt-node-servers.herokuapp.com/SoliTogether/api/v1/users/pn/5e802fe14f41e13a0c6c5db4',
         );
         setPhone(result.data.data);
       };

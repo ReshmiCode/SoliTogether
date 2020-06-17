@@ -30,7 +30,7 @@ const SubmitResource = () => {
         console.log(newResource);
 
         //Add to db here
-        axios.post('https://rowdyhacks-2020.appspot.com/api/v1/resources', {
+        axios.post('https://hdt-node-servers.herokuapp.com/SoliTogether/api/v1/resources', {
             category: newResource.category,
             title: newResource.name,
             medium: newResource.medium,

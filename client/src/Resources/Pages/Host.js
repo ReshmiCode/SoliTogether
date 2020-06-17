@@ -17,7 +17,7 @@ class Host extends React.Component {
       }
     
     componentDidMount() {
-        axios.get('https://rowdyhacks-2020.appspot.com/api/v1/resources')
+        axios.get('https://hdt-node-servers.herokuapp.com/SoliTogether/api/v1/resources')
         .then(function (response) {
           let resourceData = [];
           let resourceArray = response.data.data;

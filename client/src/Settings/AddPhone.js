@@ -15,7 +15,7 @@ const AddPhone = props => {
 
         console.log(phoneNumber);
 
-        axios.post('https://rowdyhacks-2020.appspot.com/api/v1/users/pn/5e802fe14f41e13a0c6c5db4', {
+        axios.post('https://hdt-node-servers.herokuapp.com/SoliTogether/api/v1/users/pn/5e802fe14f41e13a0c6c5db4', {
             phoneNo: phoneNumber
         })
         .then(function (response) {
