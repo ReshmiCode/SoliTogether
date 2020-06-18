@@ -1,6 +1,20 @@
 # SoliTogether
 Solitude Together: Helping you stay productive, positive, and healthy!
 
+## Created By
+
+- [Megan Tran](https://github.com/meganjtran)
+- [Reshmi Ranjith](https://github.com/ReshmiCode)
+- [Saloni Shivdasani](https://github.com/SaloniSS)
+- [Vincent Vu](https://github.com/vincent-vu280)
+
+## Links
+  
+[Website](https://rowdyhacks-2020.firebaseapp.com/)  
+[Alternative Website](https://solitogether.space/)  
+[Demo Video](https://www.youtube.com/watch?v=cAdTWwpTZtA)  
+[Devpost Submission](https://devpost.com/software/solitogether)  
+
 ## Submission
 Submitted for RowdyHacks 2020
 
@@ -29,9 +43,3 @@ We learned a lot more about CSS and Node while working on this project. We learn
 
 ## What's next for SoliTogether
 To make SoliTogether better for supporting people, we can add more resources and different categories for users. We want to add more functionality to the tasks module by adding the ability to repeat tasks on a daily or weekly basis and setting a reminder at a certain time. We also plan on adding message alerts for city warnings and important news.
-
-## Demo
-https://www.youtube.com/watch?v=kJJ_b9R2dqg
-
-## Devpost
-https://devpost.com/software/solitogether
